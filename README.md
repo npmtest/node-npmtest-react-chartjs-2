@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-react-chartjs-2/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-react-chartjs-2/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-react-chartjs-2/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-react-chartjs-2/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-react-chartjs-2/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-react-chartjs-2/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-react-chartjs-2/build/coverage.html/index.html)
 
@@ -35,15 +35,13 @@
 ```json
 
 {
-    "name": "react-chartjs-2",
-    "version": "2.0.5",
-    "description": "react-chartjs-2",
-    "main": "lib/index.js",
-    "author": "Goran Udosic",
-    "homepage": "https://github.com/gor181/react-chartjs-2",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gor181/react-chartjs-2.git"
+    "author": {
+        "name": "Goran Udosic"
+    },
+    "browserify-shim": {
+        "react": "global:React",
+        "react-dom": "global:ReactDOM",
+        "chart.js": "global:Chart"
     },
     "bugs": {
         "url": "https://github.com/gor181/react-chartjs-2/issues"
@@ -51,6 +49,7 @@
     "dependencies": {
         "lodash.isequal": "^4.4.0"
     },
+    "description": "react-chartjs-2",
     "devDependencies": {
         "babel-core": "^6.18.2",
         "babel-eslint": "^4.1.3",
@@ -76,15 +75,36 @@
         "react-dom": "^0.14 || ^15.0.0-rc || ^15.0",
         "sinon": "^1.17.6"
     },
+    "directories": {},
+    "dist": {
+        "shasum": "4cee4c9bff0f13637a770a0c740b48cf94d0a83f",
+        "tarball": "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-2.0.5.tgz"
+    },
+    "gitHead": "fc3f003882e5839ec3c8759bdf99498a066b5a38",
+    "homepage": "https://github.com/gor181/react-chartjs-2",
+    "keywords": [
+        "chart",
+        "chart-js",
+        "chart.js",
+        "react-chartjs-2",
+        "react chart.js"
+    ],
+    "main": "lib/index.js",
+    "maintainers": [
+        {
+            "name": "gor181"
+        }
+    ],
+    "name": "react-chartjs-2",
+    "optionalDependencies": {},
     "peerDependencies": {
         "chart.js": "^2.3",
         "react": "^0.14 || ^15.0.0-rc || ^15.0",
         "react-dom": "^0.14 || ^15.0.0-rc || ^15.0"
     },
-    "browserify-shim": {
-        "react": "global:React",
-        "react-dom": "global:ReactDOM",
-        "chart.js": "global:Chart"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gor181/react-chartjs-2.git"
     },
     "scripts": {
         "build": "gulp clean && NODE_ENV=production gulp build",
@@ -96,13 +116,8 @@
         "test": "mocha test/config/setup.js test/__tests__/**/*",
         "watch": "gulp watch:lib"
     },
-    "keywords": [
-        "chart",
-        "chart-js",
-        "chart.js",
-        "react-chartjs-2",
-        "react chart.js"
-    ]
+    "version": "2.0.5",
+    "bin": {}
 }
 ```
 
